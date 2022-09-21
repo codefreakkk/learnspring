@@ -8,22 +8,34 @@
     <!--    enables all the annotation in the project-->
     <context:annotation-config/>
 
+
+
 <!--    set DriverManagerDataSource bean for passing this object in jdbc template as jdbc template needs
 DataSource interface object this class implements Datasource object so this is passed as reference to jdbc template class-->
-    <bean class="org.springframework.jdbc.datasource.DriverManagerDataSource" name="datasource">
-        <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
-        <property name="url" value="jdbc:mysql://localhost:3306/emp" />
-        <property name="username" value="root"/>
-        <property name="password" value="" />
-    </bean>
+<!--    <bean class="org.springframework.jdbc.datasource.DriverManagerDataSource" name="datasource"/>-->
+
+
+
+<!--        <property name="driverClassName" value="com.mysql.jdbc.Driver"/>-->
+<!--        <property name="url" value="jdbc:mysql://localhost:3306/emp" />-->
+<!--        <property name="username" value="root"/>-->
+<!--        <property name="password" value="" />-->
+<!--    </bean>-->
+
+
+
+
 <!--    jdbc template -->
-    <bean class="org.springframework.jdbc.core.JdbcTemplate" name="jdbcTemplate" p:dataSource-ref="datasource">
+<!--    <bean class="org.springframework.jdbc.core.JdbcTemplate" name="jdbcTemplate" p:dataSource-ref="datasource">-->
 <!--        <property name="dataSource">-->
 <!--            <ref bean="datasource"/>-->
 <!--        </property>-->
-    </bean>
+<!--    </bean>-->
+
+
+
 
     <!--    set StudentDaoImpl jdbcTemplate object-->
-    <bean class="learnspring.springJDBC.dao.StudentDaoImpl" name="StudentDaoImpl" />
+<!--    <bean class="learnspring.springJDBC.dao.StudentDaoImpl" name="StudentDaoImpl" />-->
 
 </beans>
